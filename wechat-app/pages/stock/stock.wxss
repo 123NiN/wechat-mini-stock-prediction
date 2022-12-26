@@ -1,0 +1,73 @@
+/* 折线图 */
+.title{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.yuce {
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  background: #00ba9a;
+  font-size: 15px;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  line-height: 40rpx;
+  margin-left: 18px;
+  padding-top: 5px;
+  margin-top: 15px;
+  vertical-align: top;
+}
+.yuce2 {
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  background: #00ba9a;
+  font-size: 15px;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  line-height: 40rpx;
+  margin-left: 10px;
+  padding-top: 5px;
+  margin-top: 15px;
+  margin-right: 5px;
+  vertical-align: top;
+}
+.container {
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 250px;
+  margin-left: 0px;
+  
+  margin-top: 0px;
+}
+
+.boxg{
+  
+  margin-right: 2px;
+  margin-top: 20px;
+  width: 20%;
+  height: 250px;
+}
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+  border-width: 4rpx 4rpx 4rpx 4rpx;
+  border-color: rgb(71, 137, 235);
+  border-style: solid;
+}
+
+/*讨论区*/
+.discu{
+  display: flex;
+  flex-direction: column;
+  border: 1px red solid;
+  margin: 5px;
+  margin-top: 50px;
+  
+}

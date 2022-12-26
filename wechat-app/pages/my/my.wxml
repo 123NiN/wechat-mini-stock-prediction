@@ -1,0 +1,42 @@
+<view style="display:flex;flex-direction:row;width:100%;height:85px;margin-top:5px">
+  <block wx:if="{{glocanIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>     
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <image  class="userinfo-avatar" bindtap="getUserProfile" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.huabanimg.com%2Fbc4a96cf3ea27046c3f587cc1882943f666d4e7536db-JZTJN6_fw658&refer=http%3A%2F%2Fhbimg.huabanimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654846390&t=9aba527aa1c666fef3064c2391b26b6c"></image>  
+    </block> 
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+      
+  <view style="display:flex;flex-direction:column;width:200px;height:80px;margin-left:15px">
+     <view style="display:flex;flex-directioon:row;height:40px;margin-left:7px;margin-top:10px">
+      <view style="font-size:25px">
+        <view wx:if="{{canIUseOpenData}}" bindtap="bindViewTap">
+          <open-data type="userNickName"></open-data>
+        </view> 
+        <view bindtap="getUserProfile" wx:elif="{{!hasUserInfo}}">请先登录账号</view>
+        <view bindtap="bindViewTap" wx:else>{{userInfo.nickName}}</view>
+        </view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F18%2F01%2F11%2F523f57bf8777ff2ff53fdd7bed5297b0.jpg%21%2Ffwfh%2F804x804%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fku.90sjimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654846567&t=38ff17213735e4b4761b956c1789ea91" style="width:22px;height:22px;margin-top:5px;margin-left:5px" wx:if="{{!hasUserInfo}}"></image>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F38%2F62%2F59c25c87198da_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654846680&t=3773ecbf21894db8f08c6e451d3dbffb" style="width:22px;height:22px;margin-top:5px;margin-left:5px" wx:else></image>
+     </view>
+     <view style="display:flex;flex-directioon:row;height:30px;margin-left:3px">
+       <view style="font-size:13px;color:rgb(128,128,128)" wx:if="{{!hasUserInfo}}">登录以获取更多权限</view>
+     </view>
+  </view>
+</view>
+<view style="display:flex;flex-direction:row;margin-top:5px;margin-bottom:15px">
+  <view style="font-size:25px;font-weight:bold;position:fixed;right:465rpx;">股票名字</view>
+  <view style="font-size:25px;font-weight:bold;position:fixed;right:150rpx;">股票代码</view>
+</view>
+<block wx:for="{{addflag_list}}" wx:key="index" wx:if="{{item.brand_name}}">
+  <view style="display:flex;flex-direction:row;margin-top:35px">
+  <view style="font-size:25px;background:linear-gradient(to right,SkyBlue,LightSkyBlue);background-clip:text;color:transparent;-webkit-background-clip:text;position:fixed;right:465rpx;">{{item.brand_name}}</view>
+  <view style="font-size:25px;background:linear-gradient(to right,LightSkyBlue,pink);background-clip:text;color:transparent;-webkit-background-clip:text;position:fixed;right:150rpx;">{{item.code}}</view>
+  <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F81%2F21%2F5a4f44f8e3825_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628497277&t=81de32cb7e374a5a7c8a2d3e2a3cfbbf" class="imageadded" bindtap="delete" data-index="{{item.index}}"></image>
+  </view>
+</block>
+

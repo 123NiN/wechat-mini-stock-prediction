@@ -1,0 +1,96 @@
+<view style="display:flex;flex-direction:row;height:40px;padding:5px;margin:5px">
+  <view style="width:250px;padding-left:10px;height:30px;padding-top:5px;border:1px solid silver;border-radius:20px" >   
+    <input type="text" placeholder="请输入你要添加的股票" bindinput="Stockadd" />
+  </view>
+  <view style="background-color:#ffcc66;color:white;text-align:center;height:20px;margin:auto;margin-left:10px;width:60px;padding:5px;border-radius:20px;" bindtap="searchadd" >
+   添加
+  </view>
+</view>
+<view class="tab">
+    <view class="{{tab_index == 0 ? 'tab-active':''}}" data-index="0" catchtap="selectTab">已添加</view>
+    <view class="{{tab_index == 1 ? 'tab-active':''}}" data-index="1" catchtap="selectTab">最热</view>
+    <view class="{{tab_index == 2 ? 'tab-active':''}}" data-index="2" catchtap="selectTab">最新</view>
+  </view>
+ 
+  <swiper 
+    style="height:350px"
+    bindchange="tabChange"
+    current="{{tab_index}}"
+  >
+    <swiper-item>
+      <scroll-view
+        style="height: 100%;"
+        scroll-y
+        bindscroll="scroll"
+        bindscrolltolower="reactBottom"
+        scroll-with-animation
+        scroll-top="{{scrollTop0}}px"
+      >
+      <block wx:for="{{add_list}}" wx:key="index" wx:if="{{item.brand_name!=''}}">
+            <view style="font-size:15px;margin-left:20px;margin-bottom:20px;display:flex;flex-direction:row">
+            <view>{{item.brand_name}}</view>
+            <view style="color:blue;margin-left:30px">{{item.brand_num1}}</view>
+            <view style="color:red;margin-left:20px;">{{item.brand_num2}}</view>
+            <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F81%2F21%2F5a4f44f8e3825_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628497277&t=81de32cb7e374a5a7c8a2d3e2a3cfbbf" class="imageadded" bindtap="delete" data-brand="{{item.brand}}" data-id="{{item.brand_id}}" data-index="{{item.index}}"></image>
+            </view>
+        </block>
+        <view style="width:100%;margin-top:10px;text-align:center"  hidden="{{hidden1}}" bindtap="compare">对比一下</view>
+      </scroll-view>
+    </swiper-item>
+ 
+    <swiper-item>
+      <scroll-view
+        style="height: 100%;"
+        scroll-y
+        bindscroll="scroll"
+        bindscrolltolower="reactBottom"
+        scroll-with-animation
+        scroll-top="{{scrollTop1}}px"
+      >
+      <block wx:for="{{hot_list}}" wx:key="brand_id">
+            <view style="font-size:15px;margin-left:20px;margin-bottom:15px;display:flex;flex-direction:row">
+            <view>{{item.brand_name}}</view>
+            <view style="color:blue;margin-left:30px">{{item.brand_num1}}</view>
+            <view style="color:red;margin-left:20px;">{{item.brand_num2}}</view>
+            <image src="{{item.brand_added=='true'? srcbingo:srcadd}}" class="imageadded" bindtap="add" data-brand='{{item.brand}}' data-id="{{item.brand_id}}" data-code="{{item.code}}" data-name="{{item.brand_name}}"  data-num1="{{item.brand_num1}}" data-num2="{{item.brand_num2}}" data-added="{{item.brand_added}}"></image>
+            </view>
+        </block>
+        
+      </scroll-view>
+    </swiper-item>
+ 
+    <swiper-item>
+      <scroll-view
+        style="height: 100%;"
+        scroll-y
+        bindscroll="scroll"
+        bindscrolltolower="reactBottom"
+        scroll-with-animation
+        scroll-top="{{scrollTop2}}px"
+      >
+        <block wx:for="{{new_list}}" wx:key="brand_id">
+            <view style="font-size:15px;margin-left:20px;margin-bottom:15px;display:flex;flex-direction:row">
+            <view>{{item.brand_name}}</view>
+            <view style="color:blue;margin-left:30px">{{item.brand_num1}}</view>
+            <view style="color:red;margin-left:20px;">{{item.brand_num2}}</view>
+            <image src="{{item.brand_added=='true'? srcbingo:srcadd}}" class="imageadded" bindtap="add" data-brand='{{item.brand}}' data-id="{{item.brand_id}}" data-code="{{item.code}}" data-name="{{item.brand_name}}" data-num1="{{item.brand_num1}}" data-num2="{{item.brand_num2}}" data-added="{{item.brand_added}}"></image>
+            </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  
+  <view class="backTop" catchtap="backTop">
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F82%2F95%2F596fbf3e20834_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1655013486&t=a76798ca59661b9ef32f1bfd6543e087" class="backTop" ></image>
+  </view>
+  <view class="vs">
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.soutu123.com%2Felement_origin_min_pic%2F16%2F11%2F01%2F6535565d4cb524d269a5593321880230.jpg%21%2Ffw%2F700%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fpic.soutu123.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1655017050&t=cd76aaceceab079020f83eed68a525b7" class="vs" ></image>
+  </view>
+  <view class="fire">
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg95.699pic.com%2Fxsj%2F0v%2Fxi%2F5h.jpg%21%2Ffw%2F700%2Fwatermark%2Furl%2FL3hzai93YXRlcl9kZXRhaWwyLnBuZw%2Falign%2Fsoutheast&refer=http%3A%2F%2Fimg95.699pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1655016992&t=880055fc065e2cd82d93446bb8685192" class="fire" ></image>
+  </view>
+  <view class="new">
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.616pic.com%2Fys_bnew_img%2F00%2F17%2F83%2FILKEUL7vf2.jpg&refer=http%3A%2F%2Fpic.616pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1655016856&t=70bf09a4e32b06f7c240168b598c85e4" class="new" ></image>
+  </view>
+
+

@@ -1,0 +1,25 @@
+/* pages/detail/detail.wxss */
+.detail-box{
+    font-size: 36rpx;
+}
+.content{
+    /* display: flex; */
+    position: relative;
+}
+/* .content .left-content{
+    position: absolute;
+   display: flex;
+}
+.content .left-content .left-b{
+   text-indent: 74rpx;
+    font-weight: bold;
+}
+.content .left-content .right-b{
+} */
+.content .content-inner{
+    /* text-indent: 535rpx; */
+    /* background-color: rgb(112, 84, 84); */
+}
+.info{
+    display: flex;
+}

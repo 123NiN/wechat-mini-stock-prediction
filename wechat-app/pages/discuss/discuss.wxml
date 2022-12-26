@@ -1,0 +1,56 @@
+
+<view style="display:flex;flex-direction:row;height:150px">
+  <view style="display:flex;flex-direction:column;width:30px;text-align:center;margin-left:1px">
+    <view style="font-size:15px;color:blue;margin-top:88px;line-height:15px">XX股票</view>
+    <view style="font-size:15px;color:blue;margin-top:7px;line-height:15px">XX股票</view>
+    <view style="font-size:15px;color:blue;margin-top:7px;line-height:15px">XX股票</view>
+  </view>
+  <view style="display:flex;flex-direction:column;width:85px;text-align:center;margin-left:2px">
+    <view style="font-size:25px;margin-top:10px;">数据一</view>
+    <view style="font-size:20px;margin-top:10px;margin-left:5px;color:red">平均</view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">10.10%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">10.10%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">10.10%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+  </view>
+  <view style="display:flex;flex-direction:column;width:85px;text-align:center;margin-left:5px">
+    <view style="font-size:25px;margin-top:10px;">数据二</view>
+    <view style="font-size:20px;margin-top:10px;margin-left:5px;color:red">平均</view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">20.20%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">20.20%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">20.20%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+  </view>
+  <view style="display:flex;flex-direction:column;width:85px;text-align:center;margin-left:5px">
+    <view style="font-size:25px;margin-top:10px;">数据三</view>
+    <view style="font-size:20px;margin-top:10px;margin-left:5px;color:red">平均</view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">30.30%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">30.30%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+    <view style="margin-top:10px;display:flex;flex-direction:row">
+      <view style="font-size:20px;margin-left:7px">30.30%</view>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.16pic.com%2F00%2F17%2F11%2F16pic_1711720_b.jpg&refer=http%3A%2F%2Fpic2.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628681456&t=484201b25105f84aa43950aa5fc9f6fc" style="width:15px;height:20px;margin-top:3px"></image>
+    </view>
+  </view>
+</view>

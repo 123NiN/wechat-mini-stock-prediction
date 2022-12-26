@@ -1,0 +1,45 @@
+<view style="display:flex;flex-direction:row;height:40px;margin:5%;padding:5px;margin:5px">
+  <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>     
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <image  class="userinfo-avatar" bindtap="getUserProfile" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.huabanimg.com%2Fbc4a96cf3ea27046c3f587cc1882943f666d4e7536db-JZTJN6_fw658&refer=http%3A%2F%2Fhbimg.huabanimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654846390&t=9aba527aa1c666fef3064c2391b26b6c"></image>  
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+  <view style="width:250px;padding-left:10px;padding-top:5px;height:30px;border:1px solid silver;border-radius:20px;" >   
+    <input type="text" placeholder="请输入你要查找的股票" bindinput="Stock" />
+  </view>
+  <view style="background-color:#87CEEB;color:white;text-align:center;height:20px;margin:auto;margin-left:10px;width:60px;padding:5px;border-radius:20px;" bindtap="search">
+   查找
+  </view>
+</view>
+
+<swiper indicator-dots="true" autoplay="true" interval="1000" duration="500" class="swiper-box">
+        <block wx:for="{{newsHotdata}}" wx:key="index">
+            <swiper-item bindtap="tapHandler" data-id="{{item.id}}">
+                <image src='{{item.pic}}' mode=" widthFix" ></image>
+                <view class="txt">{{item.title}}</view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+
+    <view class="news-area" wx:for="{{newsdataList}}" wx:key="index" bindtap="tapHandler" data-id="{{item.id}}">
+        <view class="news-area-inner" >
+            <view class="pic-area">
+                <image src="{{item.pic}}"></image>
+            </view>
+            <view class="content-area">
+                <view class="title">{{item.title}}</view>
+                <view class="desc">{{item.desn}}</view>
+                <view class="bot">{{item.author}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="nomore" wx:if="page>last_page">
+         没有更多数据了
+    </view>

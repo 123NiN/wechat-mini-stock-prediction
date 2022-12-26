@@ -1,0 +1,28 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-box">
+    <view class="title">
+        {{newsdata.title}}
+    </view>
+    <view class="author">
+        {{newsdata.author}}
+    </view>
+    <view class="info">
+        <view class="info-innner">访问：{{newsdata.click}} | </view>
+        <view class="info-innner">收藏：{{newsdata.fav}} | </view>
+        <view class="info-innner">点赞：{{newsdata.like}}</view>
+    </view>
+    <view class="content">
+        <!-- <view class="left-content">
+            <view class="left-b">
+                {{newsdata.author}} | 消息
+            </view>
+            <view class="right-b">
+                （{{xtitle}}）：
+            </view>
+        </view> -->
+        <view class="content-inner">{{newsdata.desn}}</view>
+    </view>
+    <view class="pic">
+        <image src="{{newsdata.pic}}"></image>
+    </view>
+</view>

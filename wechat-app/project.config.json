@@ -1,0 +1,118 @@
+{
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "lazyloadPlaceholderEnable": false,
+    "useStaticServer": true,
+    "showES6CompileOption": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "minifyWXML": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.16.0",
+  "appid": "wxc040ebf43083ad7c",
+  "projectname": "%E4%B8%BB%E7%A8%8B%E5%BA%8F%E6%96%87%E4%BB%B6%E5%A4%B9",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/discuss/discuss",
+          "pathName": "pages/discuss/discuss",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/discuss/discuss",
+          "pathName": "pages/discuss/discuss",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/compare/compare",
+          "pathName": "pages/compare/compare",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/yuce/yuce",
+          "pathName": "pages/yuce/yuce",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/1",
+          "pathName": "pages/1/1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/compareresult/compareresult",
+          "pathName": "pages/compareresult/compareresult",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/stock/stock",
+          "pathName": "pages/stock/stock",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

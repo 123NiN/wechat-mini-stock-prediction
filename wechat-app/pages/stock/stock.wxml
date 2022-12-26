@@ -1,0 +1,25 @@
+<view style="display:flex;flex-direction:row;height:250px">
+  <view class="container">
+    <view class="title">
+      <view style="margin-left:10px;font-size:27px;margin-top:10px">{{stockname}}</view>
+      <view bindtap="yuce" class="yuce">预测</view>
+      <view bindtap="addflag" class="yuce2">{{addflag}}</view>
+    </view>
+  
+    <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}" danmu-list="{{text}}"></ec-canvas>
+  
+  </view>
+  <view class="boxg">
+    <view style="color:black;font-size:20px;margin-top:20px;margin-left:2px">开盘价</view>
+    <view style="margin-top:2px;color:red;font-size:18px;margin-left:6px">{{opendata}}</view>
+    <view style="margin-top:8px;color:#101010;font-size:20px;margin-left:2px">收盘价</view>
+    <view style="margin-top:2px;color:red;font-size:18px;margin-left:6px">{{closedata}}</view>
+    <view style="margin-top:8px;color:#202020;font-size:20px;margin-left:2px">最高价</view>
+    <view style="margin-top:2px;color:red;font-size:18px;margin-left:6px">{{highdata}}</view>
+    <view style="margin-top:8px;color:#303030;font-size:20px;margin-left:2px">最低价</view>
+    <view style="margin-top:2px;color:red;font-size:18px;margin-bottom:2px;margin-left:6px">{{lowdata}}</view>
+  </view>
+</view>
+
+
+
